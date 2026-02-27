@@ -29,11 +29,11 @@ const projects = [
     icon: '⌚',
   },
   {
-    name: 'Ambiant Scan',
+    name: 'Ambient Scan',
     tagline: 'Environmental Data Scraper',
     description: 'Zero-dependency single-file server for normalized environmental data: temperature, air quality, UV index, humidity, wind, and geolocation.',
     tech: ['Node.js', 'Zero Dependencies', 'REST API'],
-    github: 'https://github.com/the-governor-hq/ambiant-scan',
+    github: 'https://github.com/the-governor-hq/ambient-scan',
     gradient: 'from-violet-500/20 to-purple-500/20',
     icon: '🌍',
   },
