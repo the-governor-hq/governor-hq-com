@@ -1,6 +1,18 @@
+import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import BodyPressPrivacy from './components/BodyPressPrivacy'
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Projects />
+      <Footer />
+    </>
+  )
+}
 
 function App() {
   return (
@@ -14,9 +26,10 @@ function App() {
       {/* Grid overlay */}
       <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-      <Hero />
-      <Projects />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy/bodypress" element={<BodyPressPrivacy />} />
+      </Routes>
     </div>
   )
 }
