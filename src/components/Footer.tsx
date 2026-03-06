@@ -35,8 +35,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/the-governor-hq/ambiant-scan" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  Ambiant Scan
+                <a href="https://github.com/the-governor-hq/ambient-scan" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  Ambient Scan
                 </a>
               </li>
             </ul>
