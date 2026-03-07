@@ -20,24 +20,29 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4 text-gray-300">Projects</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://github.com/the-governor-hq/bodypress" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects/bodypress" className="text-gray-400 hover:text-white transition-colors">
                   BodyPress
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://github.com/the-governor-hq/constitution" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects/hemolens" className="text-gray-400 hover:text-white transition-colors">
+                  HemoLens
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects/constitution" className="text-gray-400 hover:text-white transition-colors">
                   Constitution
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://github.com/the-governor-hq/wearable-sdk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects/wearable-sdk" className="text-gray-400 hover:text-white transition-colors">
                   Wearable SDK
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://github.com/the-governor-hq/ambient-scan" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects/ambient-scan" className="text-gray-400 hover:text-white transition-colors">
                   Ambient Scan
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

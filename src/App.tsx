@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import BodyPressPrivacy from './components/BodyPressPrivacy'
+import ProjectPage from './components/ProjectPage'
 
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="/privacy/bodypress" element={<BodyPressPrivacy />} />
       </Routes>
     </div>
