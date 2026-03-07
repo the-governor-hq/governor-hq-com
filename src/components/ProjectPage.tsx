@@ -149,11 +149,50 @@ export default function ProjectPage() {
           </motion.div>
         )}
 
+        {/* Limitations */}
+        {project.limitations && project.limitations.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="mb-12"
+          >
+            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="text-yellow-500">⚠️</span> Limitations
+            </h2>
+            <div className="p-6 rounded-2xl bg-yellow-500/5 border border-yellow-500/20 space-y-3">
+              {project.limitations.map((limitation, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-yellow-500 mt-0.5 flex-shrink-0">•</span>
+                  <p className="text-gray-300 text-sm leading-relaxed">{limitation}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Disclaimer */}
+        {project.disclaimer && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mb-12"
+          >
+            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="text-red-500">⚠️</span> Disclaimer
+            </h2>
+            <div className="p-6 rounded-2xl bg-red-500/5 border border-red-500/20">
+              <p className="text-gray-300 text-sm leading-relaxed">{project.disclaimer}</p>
+            </div>
+          </motion.div>
+        )}
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
           className="flex flex-wrap gap-4 pt-4"
         >
           <a

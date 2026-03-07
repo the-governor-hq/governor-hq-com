@@ -12,6 +12,8 @@ export interface Project {
   features?: string[]
   status?: string
   highlights?: string[]
+  limitations?: string[]
+  disclaimer?: string
 }
 
 export const projects: Project[] = [
@@ -75,6 +77,17 @@ export const projects: Project[] = [
       'Deployed web model: test MAE ≈ 1.52 g/dL when averaging 3 crops per patient',
       'Severe anemia detection remains unreliable — further research needed',
     ],
+    limitations: [
+      'Tiny dataset: 250 patients from a single center. Results may not generalize to other populations, skin tones, cameras, or lighting conditions.',
+      'Severe anemia detection is unreliable: the model\'s error on severe cases (Hb < 8 g/dL) is ~4 g/dL — this is the most clinically important class and the model fails on it.',
+      'CV R² is negative: under session-aware cross-validation, the model does not reliably outperform predicting the population mean.',
+      'Train/deploy gap: the best offline model (CatBoost + color features) cannot run in the browser. The deployed web model (CNN-only Ridge) is weaker.',
+      'Multi-frame reduces variance, not bias: if the model systematically mispredicts under certain conditions, 30 frames will converge to the wrong answer with high confidence.',
+      'No true uncertainty estimation: the reported confidence stats (std dev, range) measure inter-frame consistency, not prediction accuracy.',
+      'WHO severity bins: the code uses general-population thresholds (8/11/13 g/dL). Real WHO guidelines are sex- and age-specific.',
+    ],
+    disclaimer:
+      'This project is NOT a medical device. HemoLens is a personal research project and is provided strictly for educational and experimental purposes. It has not been validated in a clinical setting, is not approved by any regulatory body (FDA, CE, Health Canada, etc.), and must never be used to make medical decisions, diagnose anemia, or replace a blood test. Do not rely on this software for any health-related purpose. If you suspect anemia or any medical condition, consult a qualified healthcare professional and get a proper complete blood count (CBC). The authors assume no liability for any use or misuse of this software.',
   },
   {
     slug: 'constitution',
