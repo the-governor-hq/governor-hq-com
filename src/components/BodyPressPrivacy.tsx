@@ -281,8 +281,8 @@ export default function BodyPressPrivacy() {
             <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 mt-4">
               <p className="text-gray-300">
                 <strong className="text-white">The Governor HQ</strong><br />
-                Email: <a href="mailto:privacy@governor-hq.com" className="text-cyan-400 hover:text-cyan-300">privacy@thegovernor.xyz</a><br />
-                GitHub: <a href="https://github.com/the-governor-hq/bodypress-flutter" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">github.com/the-governor-hq/bodypress</a>
+                Email: <a href="mailto:privacy@governor-hq.com" className="text-cyan-400 hover:text-cyan-300">privacy@governor-hq.com</a><br />
+                GitHub: <a href="https://github.com/miruns/bodypress" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">github.com/the-governor-hq/bodypress</a>
               </p>
             </div>
           </section>
